@@ -1,0 +1,31 @@
+{%extends 'navigation.html'%}
+{%block bikes%}
+        <div class="col-12 col-lg-8 col-md-10 col-sm-12 text-nowrap">
+            <div class="table-responsive">
+            <table class="table table-stripped p-3 rounded-5 shadow-lg">
+                <thead>
+                    <tr>
+                        <th>Bike Brand</th> 
+                        <th>Bike regno</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for document in data%}
+                        <tr>
+                            <td>
+                                
+                                    {{document.bikebrand}}
+                            </td>
+                            <td>
+                                <a href="/pick/{{document.bikeregno}}" class="btn btn-outline-warning">
+                                {{document.bikeregno}}
+                            </a>
+                            </td>
+
+                        </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{%endblock%}
